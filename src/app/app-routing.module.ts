@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login-form',
     pathMatch: 'full'
+  },
+  {
+    path: 'login-form',
+    loadChildren: () => import('./login-form/login-form.module').then( m => m.LoginFormPageModule)
   },
 ];
 
